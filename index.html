@@ -1,51 +1,84 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Ngữ pháp N5–N4</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
-    .item { background: white; padding: 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    h2 { margin: 0 0 8px; font-size: 18px; color: #333; }
-    .field { margin: 4px 0; }
-    .label { font-weight: bold; color: #555; }
-    .value { margin-left: 8px; }
-  </style>
-</head>
-<body>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngữ pháp tiếng Nhật</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-900 p-6 font-sans">
+    <h1 class="text-2xl font-bold mb-4">Ngữ pháp tiếng Nhật N5–N4</h1>
 
-  <h1>Ngữ pháp tiếng Nhật N5–N4</h1>
+    <!-- Bộ lọc cấp độ -->
+    <div class="mb-4 space-x-2">
+      <button data-filter="all" class="px-3 py-1 bg-blue-500 text-white rounded">Tất cả</button>
+      <button data-filter="N5" class="px-3 py-1 bg-gray-200 rounded">N5</button>
+      <button data-filter="N4" class="px-3 py-1 bg-gray-200 rounded">N4</button>
+    </div>
 
-  <div class="item">
-    <h2>～は～です</h2>
-    <div class="field"><span class="label">Cách dùng:</span><span class="value">N1 は N2 です</span></div>
-    <div class="field"><span class="label">Ý nghĩa:</span><span class="value">N1 là N2</span></div>
-    <div class="field"><span class="label">Ví dụ:</span><span class="value">たなかさん は かいしゃいんです。<br>→ Anh Tanaka là nhân viên công ty.</span></div>
-    <div class="field"><span class="label">Lưu ý:</span><span class="value">Trong tiếng Nhật không có dấu cách. Viết cách は ra để dễ nhận biết mẫu ngữ pháp trong câu.</span></div>
-  </div>
+    <!-- Bảng ngữ pháp -->
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full border border-gray-300 text-sm">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border px-2 py-1">Tên ngữ pháp</th>
+            <th class="border px-2 py-1">Cách dùng</th>
+            <th class="border px-2 py-1">Ý nghĩa</th>
+            <th class="border px-2 py-1">Ví dụ</th>
+            <th class="border px-2 py-1">Lưu ý</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-level="N5">
+            <td class="border px-2 py-1">～は～です</td>
+            <td class="border px-2 py-1">N1 は N2 です</td>
+            <td class="border px-2 py-1">N1 là N2</td>
+            <td class="border px-2 py-1">たなかさん は かいしゃいん です。</td>
+            <td class="border px-2 py-1">Không có dấu cách trong tiếng Nhật, は viết cách ra để dễ nhận biết</td>
+          </tr>
+          <tr data-level="N5">
+            <td class="border px-2 py-1">～は～じゃありません</td>
+            <td class="border px-2 py-1">N1 は N2 じゃありません</td>
+            <td class="border px-2 py-1">N1 không phải là N2</td>
+            <td class="border px-2 py-1">たなかさん は ベトナム人 じゃありません。</td>
+            <td class="border px-2 py-1">じゃ = では, cũng viết là N1 は N2 ではありません</td>
+          </tr>
+          <tr data-level="N5">
+            <td class="border px-2 py-1">ですか</td>
+            <td class="border px-2 py-1">N1 は N2 ですか</td>
+            <td class="border px-2 py-1">N1 có phải là N2 không?</td>
+            <td class="border px-2 py-1">たなかさん は せんせい ですか。</td>
+            <td class="border px-2 py-1">Có thể kết thúc bằng 。 hoặc ？</td>
+          </tr>
+          <tr data-level="N5">
+            <td class="border px-2 py-1">～も～</td>
+            <td class="border px-2 py-1">～もNです</td>
+            <td class="border px-2 py-1">~ cũng</td>
+            <td class="border px-2 py-1">Thanhさん も ベトナム人 です。</td>
+            <td class="border px-2 py-1">も thay cho は khi thông tin đã được nói trước</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <div class="item">
-    <h2>～は～じゃありません</h2>
-    <div class="field"><span class="label">Cách dùng:</span><span class="value">N1 は N2 じゃありません</span></div>
-    <div class="field"><span class="label">Ý nghĩa:</span><span class="value">N1 không phải là N2</span></div>
-    <div class="field"><span class="label">Ví dụ:</span><span class="value">たなかさん は ベトナム人 じゃありません。<br>→ Anh Tanaka không phải là người Việt Nam.</span></div>
-    <div class="field"><span class="label">Lưu ý:</span><span class="value">じゃ = では. N1 は N2 ではありません.</span></div>
-  </div>
+    <!-- Script lọc cấp độ -->
+    <script>
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const rows = document.querySelectorAll("[data-level]");
 
-  <div class="item">
-    <h2>ですか</h2>
-    <div class="field"><span class="label">Cách dùng:</span><span class="value">N1 は N2 ですか</span></div>
-    <div class="field"><span class="label">Ý nghĩa:</span><span class="value">N1 có phải là N2 không? Dùng để tạo câu nghi vấn, chỉ cần thêm か vào cuối câu.</span></div>
-    <div class="field"><span class="label">Ví dụ:</span><span class="value">たなかさん は せんせいですか。<br>→ Anh Tanaka là giáo viên à?</span></div>
-    <div class="field"><span class="label">Lưu ý:</span><span class="value">Sau か có thể là dấu chấm câu 。hoặc dấu hỏi ?</span></div>
-  </div>
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const level = btn.getAttribute("data-filter");
 
-  <div class="item">
-    <h2>～も～</h2>
-    <div class="field"><span class="label">Cách dùng:</span><span class="value">～もNです</span></div>
-    <div class="field"><span class="label">Ý nghĩa:</span><span class="value">～ cũng. Trợ từ も dùng thay cho は khi thông tin về chủ đề của câu giống với những thông tin chủ đề câu trước đó.</span></div>
-    <div class="field"><span class="label">Ví dụ:</span><span class="value">わたし は ベトナム人 です。<br>Thanhさん も ベトナム人 です。</span></div>
-  </div>
-
-</body>
+          rows.forEach((row) => {
+            if (level === "all" || row.getAttribute("data-level") === level) {
+              row.style.display = "";
+            } else {
+              row.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
